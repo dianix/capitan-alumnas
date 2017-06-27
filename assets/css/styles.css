@@ -7,10 +7,22 @@
 
 header {
   display: grid;
-  width: 100vw;
+  width: 100%;
   background: #EBB85D;
   text-align: center;
   height: 15vh;
   color: #fff; }
+
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; }
+
+footer {
+  width: 100%;
+  background: #3E3F40;
+  text-align: center;
+  color: #fff;
+  height: 10vh; }
 
 /*# sourceMappingURL=styles.css.map */
