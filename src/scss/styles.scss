@@ -1,22 +1,30 @@
-/*atributos reusables*/ 
+/*atributos reusables*/
+
 $dark-background: #3E3F40;
 $orange-background: #EBB85D;
 $light-text: #fff;
 $dark-text: #101010;
 $full-width: 100%;
-
-@mixin dark-element ($text,$heig) {
+$pad: 1rem;
+$margin-b: 2vh;
+@mixin dark-element ($text, $heig) {
     background: $dark-background;
     text-align: ($text);
     color: $light-text;
-    height:$heig;
+    height: $heig;
 }
 
-@mixin orange-element ($text,$heig){
+@mixin orange-element ($text, $heig) {
     background: $orange-background;
     text-align: ($text);
     height: ($heig);
     color: $light-text;
+}
+
+@mixin flex-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 * {
@@ -27,18 +35,82 @@ $full-width: 100%;
 }
 
 header {
-    display: grid;
     width: $full-width;
-    @include orange-element(center,15vh);
+    @include orange-element(center, 15vh);
+    @include flex-content;
 }
 
 main {
     width: $full-width;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;   
+    //grid-template-columns: 1fr 2fr 1fr;
+    padding: $pad;
+    h1,
+    h4 {
+        font-weight: bold;
+    }
+    ol {
+        padding-left: 2vw;
+    }
+}
+
+#side-menu {
+    ul {
+        line-height: 6vh;
+        list-style: none;
+        li {
+            @include dark-element(left, auto);
+            margin: 0 0 1rem;
+            padding: 0 2vw;
+            cursor: pointer;
+        }
+        li:last-child {
+            @include orange-element(left, auto);
+        }
+    }
+}
+
+#main-content {
+    padding: 0 1vw;
+    h1,
+    h4,
+    p,
+    ol {
+        margin-bottom: $margin-b;
+    }
+}
+
+#secondary-content {
+    @include dark-element(center, auto);
+    padding: $pad;
+    h2,
+    p {
+        margin-bottom: $margin-b;
+    }
 }
 
 footer {
     width: $full-width;
-    @include dark-element(center,10vh);
+    @include dark-element(center, 10vh);
+    @include flex-content;
+}
+
+@media (min-width:769px) {
+    main {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+@media (min-width:669px) and (max-width:768px) {
+    main {
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto;
+    }
+}
+
+@media (min-width:0px) and (max-width:668px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
 }
