@@ -1,31 +1,5 @@
-/*atributos reusables*/
-
-$dark-background: #3E3F40;
-$orange-background: #EBB85D;
-$light-text: #fff;
-$dark-text: #101010;
-$full-width: 100%;
-$pad: 1rem;
-$margin-b: 2vh;
-@mixin dark-element ($text, $heig) {
-    background: $dark-background;
-    text-align: ($text);
-    color: $light-text;
-    height: $heig;
-}
-
-@mixin orange-element ($text, $heig) {
-    background: $orange-background;
-    text-align: ($text);
-    height: ($heig);
-    color: $light-text;
-}
-
-@mixin flex-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import 'variables';
+@import 'mixins';
 
 * {
     box-sizing: border-box;
@@ -38,19 +12,22 @@ header {
     width: $full-width;
     @include orange-element(center, 15vh);
     @include flex-content;
+    h1 {
+        font-size: 3rem;
+    }
 }
 
 main {
     width: $full-width;
     display: grid;
-    //grid-template-columns: 1fr 2fr 1fr;
     padding: $pad;
     h1,
     h4 {
-        font-weight: bold;
+        font-weight: bolder;
     }
-    ol {
-        padding-left: 2vw;
+    table {
+        width: $full-width;
+        text-align: left;
     }
 }
 

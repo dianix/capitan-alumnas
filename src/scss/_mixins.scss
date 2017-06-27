@@ -1,0 +1,19 @@
+@mixin dark-element ($text, $heig) {
+    background: $dark-background;
+    text-align: ($text);
+    color: $light-text;
+    height: $heig;
+}
+
+@mixin orange-element ($text, $heig) {
+    background: $orange-background;
+    text-align: ($text);
+    height: ($heig);
+    color: $light-text;
+}
+
+@mixin flex-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
