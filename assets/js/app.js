@@ -19,7 +19,7 @@ var cargarLista = function () {
 var formatoAlumna = function (alumna) {
     // guardando datos necesarios
     var numLista = alumna.id;
-    var nombreAlumna = alumna.name + " " + alumna.pLastName;
+    var nombreAlumna = alumna.name + " " + alumna.pLastName + " " + alumna.mLastName;
     // creando elementos html por alumna
     var $filaAlumna = $('<tr/>');
     var $listaDato = $('<td/>').append(numLista);
