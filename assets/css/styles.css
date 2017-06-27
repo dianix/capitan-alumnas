@@ -76,7 +76,10 @@ footer {
 @media (min-width: 669px) and (max-width: 768px) {
   main {
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: auto; } }
+    grid-template-rows: auto; }
+
+  #secondary-content {
+    grid-column: 1/3; } }
 @media (min-width: 0px) and (max-width: 668px) {
   main {
     grid-template-columns: 1fr;
