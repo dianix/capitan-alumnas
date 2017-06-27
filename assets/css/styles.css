@@ -1,0 +1,16 @@
+/*atributos reusables*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+header {
+  display: grid;
+  width: 100vw;
+  background: #EBB85D;
+  text-align: center;
+  height: 15vh;
+  color: #fff; }
+
+/*# sourceMappingURL=styles.css.map */

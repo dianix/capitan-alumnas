@@ -1,0 +1,32 @@
+/*atributos reusables*/ 
+$dark-background: #3E3F40;
+$orange-background: #EBB85D;
+$light-text: #fff;
+$dark-text: #101010;
+$full-width: 100vw;
+
+@mixin dark-element ($text) {
+    background: $dark-background;
+    text-align: ($text);
+    color: $light-text;
+}
+
+@mixin orange-element ($text,$heig){
+    background: $orange-background;
+    text-align: ($text);
+    height: ($heig);
+    color: $light-text;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+header {
+    display: grid;
+    width: $full-width;
+    @include orange-element(center,15vh);
+}
